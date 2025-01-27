@@ -20,6 +20,13 @@ namespace ApiVideo.Model {
     [JsonProperty(PropertyName = "title")]
     public string title { get; set; }
     /// <summary>
+    /// A subtitle of your video.
+    /// </summary>
+    /// <value>A subtitle of your video.</value>
+    [DataMember(Name="subtitle", EmitDefaultValue=false)]
+    [JsonProperty(PropertyName = "subtitle")]
+    public string subtitle { get; set; }
+    /// <summary>
     /// A brief description of your video.
     /// </summary>
     /// <value>A brief description of your video.</value>
@@ -135,6 +142,7 @@ namespace ApiVideo.Model {
       var sb = new StringBuilder();
       sb.Append("class VideoCreationPayload {\n");
       sb.Append("  Title: ").Append(title).Append("\n");
+      sb.Append("  Subtitle: ").Append(subtitle).Append("\n");
       sb.Append("  Description: ").Append(description).Append("\n");
       sb.Append("  Source: ").Append(source).Append("\n");
       sb.Append("  Public: ").Append(_public).Append("\n");
